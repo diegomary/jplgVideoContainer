@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-2.1.0.js"></script>
+    <script src="Scripts/jquery-ui-1.10.4.js"></script>
+ 
+    <link href="Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link href="Content/themes/base/jquery.ui.all.css" rel="stylesheet" />
+
+
+    <script>
+        jQuery(document).ready(function () {
+         
+            document.getElementById("msgbox").addEventListener("submit", function (e) {
+               e.preventDefault();
+                var msg = $("#msg").val();
+                if (msg) {
+                    alert(msg);
+                }
+            }, false);
+
+
+
+            document.getElementById("mybutton").addEventListener("click", function (e) {
+              
+                alert("Button clicked")
+
+
+            }, false);
+
+
+
+            $("#mybutton").on("custom", function (event, param1, param2) {
+                alert(param1 + "\n" + param2);
+            });
+            $("#mybutton").trigger("custom", ["Diego", "MAria"]);
+
+
+           
+        });
+    </script>
+
+
+
+</head>
+<body>
+
+    <button type="button" id="mybutton">click me</button>
+
+
+    <form id="msgbox" action="www.dmm888.com" method="get">
+        <label for="msg">your message</label>
+        <input id="msg" value="" />
+        <button type="submit">SEND</button>
+    </form>
+
+
+
+
+</body>
+</html>

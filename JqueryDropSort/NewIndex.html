@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="Scripts/jquery-2.1.0.js"></script>
+    <script src="Scripts/jquery-ui-1.10.4.js"></script>
+    <script src="Scripts/corePlugin.js"></script>
+    <link href="Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link href="Content/themes/base/jquery.ui.all.css" rel="stylesheet" />
+    <link href="Content/plugin/plugin-styles.css" rel="stylesheet" />
+
+    <style>     
+     </style>
+
+    
+    <title></title>
+    <script>
+        jQuery(document).ready(function () {
+            $('#videoc').addClass('videocont'); // First we style the container
+
+                          var films = [{ Title: "The beauty and the beast", Duration: "1:25:24", Filename: "small.mp4" },
+                                       { Title: "The Small", Duration: "1:12:24", Filename: "big_buck_bunny.mp4" },
+                                       { Title: "The Small", Duration: "1:25:24", Filename: "big_buck_bunny.mp4" },
+                                       { Title: "The beauty and the beast", Duration: "1:12:24", Filename: "small.mp4" }];
+                          $('#videoc').createVideoContainer(films);
+                          $("#videoc").trigger("LoadFilmFromWebAddress", ["Diego", "MAria"]);
+                          //var films1 = [{ Title: "111The beauty and the beast", Duration: "1:25:24ytytyt", Filename: "small.mp4" },
+                          //                          { Title: "2222The Small", Duration: "1:12:24tytytyt", Filename: "big_buck_bunny.mp4" },
+                          //                          { Title: "3333The Small", Duration: "1:25:24ytytyt", Filename: "big_buck_bunny.mp4" },
+                          //                          { Title: "4444The beauty and the beast", Duration: "1:12:24ytytyt", Filename: "small.mp4" }];
+                          //$('#videoc').createVideoContainer.loadnewfiles(films1);
+                          //var films2 = [{ Title: "fdfdfdfdfdfd", Duration: "1:25:24ytytyt", Filename: "small.mp4" },
+                          //                                         { Title: "Keep The balance", Duration: "1:12:24tytytyt", Filename: "big_buck_bunny.mp4" },
+                          //                                         { Title: "kjhkghjkghkghkl", Duration: "1:25:24ytytyt", Filename: "big_buck_bunny.mp4" },
+                          //                                         { Title: "zzzzzzzzzzzzzzzzzzz", Duration: "1:12:24ytytyt", Filename: "small.mp4" }];
+
+                          //$('#videoc').createVideoContainer.loadnewfiles(films2);
+
+        });
+    </script>
+</head>
+<body>
+
+    <div id="videoc"></div>
+   
+</body>
+</html>
